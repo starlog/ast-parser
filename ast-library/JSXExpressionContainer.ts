@@ -4,9 +4,13 @@
 import ast from './ast';
 import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
-export default class placeholder extends ast {
+export default class JSXExpressionContainer extends ast {
   toString() {
-    const x = this.obj;
-    return '';
+    let expression = '';
+    if (this.obj?.expression) {
+      const myObject = CreateDynamicASTClass(this.obj.expression);
+      expression += myObject.get();
+    }
+    return expression;
   }
 }

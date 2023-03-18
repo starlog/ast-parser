@@ -18,6 +18,10 @@ export default class ArrowFunctionExpression extends ast {
       const myObject = CreateDynamicASTClass(this.obj.body);
       data2 += myObject.get();
     }
-    return `(${data1}) => {${data2}}`;
+    // TODO matched with UI003, need check with other sample
+    if (this.obj?.body.type === 'BlockStatement') {
+      return `(${data1}) => {${data2}\n}`;
+    }
+    return `{${data1} => ${data2}}`;
   }
 }

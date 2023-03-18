@@ -14,6 +14,6 @@ export default class ObjectExpression extends ast {
       });
     }
     returnVal = returnVal.slice(0, -2);
-    return `${returnVal}`;
+    return `{${returnVal}}`;
   }
 }

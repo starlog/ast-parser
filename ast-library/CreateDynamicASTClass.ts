@@ -77,6 +77,10 @@ import UnaryExpression from './UnaryExpression';
 import AssignmentExpression from './AssignmentExpression';
 import SequenceExpression from './SequenceExpression';
 import TSTypeParameterInstantiation from './TSTypeParameterInstantiation';
+import JSXOpeningElement from './JSXOpeningElement';
+import JSXAttribute from './JSXAttribute';
+import JSXExpressionContainer from './JSXExpressionContainer';
+import JSXIdentifier from './JSXIdentifier';
 
 const classes = [
   ImportDeclaration,
@@ -153,6 +157,10 @@ const classes = [
   AssignmentExpression,
   SequenceExpression,
   TSTypeParameterInstantiation,
+  JSXOpeningElement,
+  JSXAttribute,
+  JSXExpressionContainer,
+  JSXIdentifier,
 ];
 
 const logger = getLogger();
