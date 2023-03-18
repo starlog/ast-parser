@@ -81,6 +81,8 @@ import JSXOpeningElement from './JSXOpeningElement';
 import JSXAttribute from './JSXAttribute';
 import JSXExpressionContainer from './JSXExpressionContainer';
 import JSXIdentifier from './JSXIdentifier';
+import JSXClosingElement from './JSXClosingElement';
+import JSXText from './JSXText';
 
 const classes = [
   ImportDeclaration,
@@ -161,6 +163,8 @@ const classes = [
   JSXAttribute,
   JSXExpressionContainer,
   JSXIdentifier,
+  JSXClosingElement,
+  JSXText,
 ];
 
 const logger = getLogger();
