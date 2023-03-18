@@ -181,4 +181,15 @@ for (const element of targetFiles) {
     }
   });
   logger.debug('\n\n');
+
+  //------------------------------------------------------------------------------------------------
+  // ExportDefaultDeclaration 정의 구문 분석, 개별 클래스 방식
+  //------------------------------------------------------------------------------------------------
+  title('ExportDefaultDeclaration');
+  const ExportDefaultDeclaration = jp.query(codeData, '$.program.body[?(@.type === "ExportDefaultDeclaration")]');
+  ExportDefaultDeclaration.forEach((exportDefaultItem) => {
+    const myObject = CreateDynamicASTClass(exportDefaultItem);
+    console.log(myObject.get());
+  });
+  console.log('\n\n');
 }

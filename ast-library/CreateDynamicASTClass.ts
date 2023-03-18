@@ -36,6 +36,8 @@ import TSQualifiedName from './TSQualifiedName';
 import TSTypeQuery from './TSTypeQuery';
 import TSUndefinedKeyword from './TSUndefinedKeyword';
 import TSVoidKeyword from './TSVoidKeyword';
+import ExportDefaultDeclaration from './ExportDefaultDeclaration';
+import CallExpression from './CallExpression';
 
 const classes = [
   ImportDeclaration,
@@ -71,6 +73,8 @@ const classes = [
   TSTypeQuery,
   TSUndefinedKeyword,
   TSVoidKeyword,
+  ExportDefaultDeclaration,
+  CallExpression,
 
 ];
 
