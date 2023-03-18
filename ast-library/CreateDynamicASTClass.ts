@@ -45,6 +45,12 @@ import ObjectExpression from './ObjectExpression';
 import ObjectPattern from './ObjectPattern';
 import TaggedTemplateExpression from './TaggedTemplateExpression';
 import TSAsExpression from './TSAsExpression';
+import BinaryExpression from './BinaryExpression';
+import BlockStatement from './BlockStatement';
+import MemberExpression from './MemberExpression';
+import ObjectProperty from './ObjectProperty';
+import RestElement from './RestElement';
+import TemplateLiteral from './TemplateLiteral';
 
 const classes = [
   ImportDeclaration,
@@ -89,6 +95,12 @@ const classes = [
   ObjectPattern,
   TaggedTemplateExpression,
   TSAsExpression,
+  BinaryExpression,
+  BlockStatement,
+  MemberExpression,
+  ObjectProperty,
+  RestElement,
+  TemplateLiteral,
 ];
 
 const logger = getLogger();
