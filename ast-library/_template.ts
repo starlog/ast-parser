@@ -7,6 +7,6 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 export default class placeholder extends ast {
   toString() {
     const x = this.obj;
-    return '';
+    return `(Bare:${this.constructor.name})`;
   }
 }
