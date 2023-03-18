@@ -15,7 +15,7 @@ const logger = getLogger();
 
 const filePrefix = '/home/felix/src/granada-user-app/src/components/';
 const targetFiles = [
-  'UI004.tsx',
+  'UI006.tsx',
 ];
 
 function title(titleString) {

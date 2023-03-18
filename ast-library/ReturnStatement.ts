@@ -11,6 +11,6 @@ export default class ReturnStatement extends ast {
       const myObject = CreateDynamicASTClass(this.obj.argument);
       returnVal += myObject.get();
     }
-    return `return ${returnVal};`;
+    return `return (${returnVal});`;
   }
 }

@@ -26,6 +26,6 @@ export default class TemplateLiteral extends ast {
         }
       });
     }
-    return `${val2}`;
+    return `\`${val1}${val2}`;
   }
 }
