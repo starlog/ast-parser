@@ -192,4 +192,15 @@ for (const element of targetFiles) {
     console.log(myObject.get());
   });
   console.log('\n\n');
+
+  //------------------------------------------------------------------------------------------------
+  // VariableDeclaration 정의 구문 분석, 개별 클래스 방식
+  //------------------------------------------------------------------------------------------------
+  title('VariableDeclaration');
+  const VariableDeclaration = jp.query(codeData, '$.program.body[?(@.type === "VariableDeclaration")]');
+  VariableDeclaration.forEach((variableItem) => {
+    const myObject = CreateDynamicASTClass(variableItem);
+    console.log(myObject.get());
+  });
+  console.log('\n\n');
 }

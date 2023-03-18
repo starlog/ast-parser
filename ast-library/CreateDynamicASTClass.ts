@@ -38,6 +38,13 @@ import TSUndefinedKeyword from './TSUndefinedKeyword';
 import TSVoidKeyword from './TSVoidKeyword';
 import ExportDefaultDeclaration from './ExportDefaultDeclaration';
 import CallExpression from './CallExpression';
+import VariableDeclaration from './VariableDeclaration';
+import VariableDeclarator from './VariableDeclarator';
+import ArrowFunctionExpression from './ArrowFunctionExpression';
+import ObjectExpression from './ObjectExpression';
+import ObjectPattern from './ObjectPattern';
+import TaggedTemplateExpression from './TaggedTemplateExpression';
+import TSAsExpression from './TSAsExpression';
 
 const classes = [
   ImportDeclaration,
@@ -75,7 +82,13 @@ const classes = [
   TSVoidKeyword,
   ExportDefaultDeclaration,
   CallExpression,
-
+  VariableDeclaration,
+  VariableDeclarator,
+  ArrowFunctionExpression,
+  ObjectExpression,
+  ObjectPattern,
+  TaggedTemplateExpression,
+  TSAsExpression,
 ];
 
 const logger = getLogger();
