@@ -51,6 +51,31 @@ import MemberExpression from './MemberExpression';
 import ObjectProperty from './ObjectProperty';
 import RestElement from './RestElement';
 import TemplateLiteral from './TemplateLiteral';
+import ArrayExpression from './ArrayExpression';
+import ArrayPattern from './ArrayPattern';
+import AssignmentPattern from './AssignmentPattern';
+import AwaitExpression from './AwaitExpression';
+import BooleanLiteral from './BooleanLiteral';
+import ConditionalExpression from './ConditionalExpression';
+import ExpressionStatement from './ExpressionStatement';
+import ForStatement from './ForStatement';
+import IfStatement from './IfStatement';
+import JSXElement from './JSXElement';
+import JSXFragment from './JSXFragment';
+import LogicalExpression from './LogicalExpression';
+import NewExpression from './NewExpression';
+import NullLiteral from './NullLiteral';
+import OptionalCallExpression from './OptionalCallExpression';
+import OptionalMemberExpression from './OptionalMemberExpression';
+import RegExpLiteral from './RegExpLiteral';
+import ReturnStatement from './ReturnStatement';
+import SpreadElement from './SpreadElement';
+import SwitchStatement from './SwitchStatement';
+import TemplateElement from './TemplateElement';
+import TryStatement from './TryStatement';
+import UnaryExpression from './UnaryExpression';
+import AssignmentExpression from './AssignmentExpression';
+import SequenceExpression from './SequenceExpression';
 
 const classes = [
   ImportDeclaration,
@@ -101,6 +126,31 @@ const classes = [
   ObjectProperty,
   RestElement,
   TemplateLiteral,
+  ArrayExpression,
+  ArrayPattern,
+  AssignmentPattern,
+  AwaitExpression,
+  BooleanLiteral,
+  ConditionalExpression,
+  ExpressionStatement,
+  ForStatement,
+  IfStatement,
+  JSXElement,
+  JSXFragment,
+  LogicalExpression,
+  NewExpression,
+  NullLiteral,
+  OptionalCallExpression,
+  OptionalMemberExpression,
+  RegExpLiteral,
+  ReturnStatement,
+  SpreadElement,
+  SwitchStatement,
+  TemplateElement,
+  TryStatement,
+  UnaryExpression,
+  AssignmentExpression,
+  SequenceExpression,
 ];
 
 const logger = getLogger();
