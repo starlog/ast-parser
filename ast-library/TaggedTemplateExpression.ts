@@ -6,15 +6,21 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
 export default class TaggedTemplateExpression extends ast {
   toString() {
-    let returnVal = '';
+    let val1 = '';
+    let val2 = '';
+    let val3 = '';
     if (this.obj?.tag) {
       const myObject = CreateDynamicASTClass(this.obj.tag);
-      returnVal += myObject.get();
+      val1 += myObject.get();
+    }
+    if (this.obj?.typeParameters) {
+      const myObject = CreateDynamicASTClass(this.obj?.typeParameters);
+      val2 += myObject.get();
     }
     if (this.obj?.quasi) {
       const myObject = CreateDynamicASTClass(this.obj.quasi);
-      returnVal += myObject.get();
+      val3 += myObject.get();
     }
-    return returnVal;
+    return `${val1}${val2}${val3}`;
   }
 }

@@ -76,6 +76,7 @@ import TryStatement from './TryStatement';
 import UnaryExpression from './UnaryExpression';
 import AssignmentExpression from './AssignmentExpression';
 import SequenceExpression from './SequenceExpression';
+import TSTypeParameterInstantiation from './TSTypeParameterInstantiation';
 
 const classes = [
   ImportDeclaration,
@@ -151,6 +152,7 @@ const classes = [
   UnaryExpression,
   AssignmentExpression,
   SequenceExpression,
+  TSTypeParameterInstantiation,
 ];
 
 const logger = getLogger();
