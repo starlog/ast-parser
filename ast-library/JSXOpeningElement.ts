@@ -16,18 +16,18 @@ export default class JSXOpeningElement extends ast {
     }
     if (this.obj?.identifier) {
       const myObject = CreateDynamicASTClass(this.obj.identifier);
-      identifier += myObject.get();
+      identifier += ` ${myObject.get()}`;
     }
     if (this.obj?.attributes) {
       this.obj.attributes.forEach((x) => {
         const myObject = CreateDynamicASTClass(x);
-        attributes += `${myObject.get()} `;
+        attributes += ` ${myObject.get()}`;
       });
     }
     if (this.obj?.selfClosing) {
-      returnVal = `<${name} ${identifier} ${attributes}/>`;
+      returnVal = `<${name}${identifier}${attributes}/>`;
     } else {
-      returnVal = `<${name} ${identifier} ${attributes}>`;
+      returnVal = `<${name}${identifier}${attributes}>`;
     }
     return returnVal;
   }

@@ -111,16 +111,4 @@ for (const element of targetFiles) {
     console.log('');
   });
   console.log('\n\n');
-  // setLevel('all');
-  // //------------------------------------------------------------------------------------------------
-  // // VariableDeclaration 정의 구문 분석, 개별 클래스 방식
-  // //------------------------------------------------------------------------------------------------
-  // title('VariableDeclaration');
-  // const VariableDeclaration2 = jp.query(codeData, '$.program.body[?(@.type === "VariableDeclaration")]');
-  // VariableDeclaration2.forEach((variableItem) => {
-  //   const myObject = CreateDynamicASTClass(variableItem);
-  //   console.log(myObject.get());
-  //   console.log('');
-  // });
-  // console.log('\n\n');
 }

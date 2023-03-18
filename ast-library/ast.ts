@@ -25,9 +25,10 @@ export default class ast {
   }
 
   get() {
-    if (getLevel() === 'all') {
-      return `\x1b[33m(S-${this.constructor.name})\x1b[0m\x1b[37m${this.toString()}\x1b[0m\x1b[33m(${this.constructor.name}-E)\x1b[0m\n`;
-    }
-    return `${this.toString()}`;
+    // if (getLevel() === 'all') {
+    //   return `\x1b[33m(S-${this.constructor.name})\x1b[0m\x1b[37m${this.toString()}\x1b[0m\x1b[33m(${this.constructor.name}-E)\x1b[0m\n`;
+    // }
+    // return `${this.toString()}`;
+    return this.toString();
   }
 }
