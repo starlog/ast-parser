@@ -1,0 +1,22 @@
+{
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es2022": true,
+        "es2021": true
+    },
+    "extends": "airbnb-base",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "requireConfigFile": false
+    },
+    "rules": {
+        "no-restricted-syntax": "off",
+        "max-len": "off",
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "no-console": "off"
+    }
+}

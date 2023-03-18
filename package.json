@@ -1,0 +1,19 @@
+{
+  "name": "code-analysis",
+  "version": "1.0.0",
+  "dependencies": {
+    "@babel/parser": "^7.21.3",
+    "jsonpath": "^1.1.1",
+    "log4js": "^6.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.0.2"
+  }
+}
