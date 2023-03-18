@@ -12,7 +12,7 @@ import {
 const jp = require('jsonpath');
 
 const logger = getLogger();
-setLevel('debug');
+
 const filePrefix = '/home/felix/src/granada-user-app/src/components/';
 const targetFiles = [
   'UI003.tsx',
@@ -99,6 +99,7 @@ for (const element of targetFiles) {
   });
   console.log('\n\n');
 
+  setLevel('debug');
   //------------------------------------------------------------------------------------------------
   // VariableDeclaration 정의 구문 분석, 개별 클래스 방식
   //------------------------------------------------------------------------------------------------
@@ -109,4 +110,15 @@ for (const element of targetFiles) {
     console.log(myObject.get());
   });
   console.log('\n\n');
+  // setLevel('all');
+  // //------------------------------------------------------------------------------------------------
+  // // VariableDeclaration 정의 구문 분석, 개별 클래스 방식
+  // //------------------------------------------------------------------------------------------------
+  // title('VariableDeclaration');
+  // const VariableDeclaration2 = jp.query(codeData, '$.program.body[?(@.type === "VariableDeclaration")]');
+  // VariableDeclaration2.forEach((variableItem) => {
+  //   const myObject = CreateDynamicASTClass(variableItem);
+  //   console.log(myObject.get());
+  // });
+  // console.log('\n\n');
 }

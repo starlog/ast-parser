@@ -26,7 +26,7 @@ export default class ast {
 
   get() {
     if (getLevel() === 'all') {
-      return `[${this.constructor.name}=>${this.toString()}]`;
+      return `#S-${this.constructor.name}^${this.toString()}^${this.constructor.name}-E#\n`;
     }
     return `${this.toString()}`;
   }

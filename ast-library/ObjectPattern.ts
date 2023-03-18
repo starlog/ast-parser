@@ -14,6 +14,6 @@ export default class ObjectPattern extends ast {
       });
       returnVal = returnVal.slice(0, -2);
     }
-    return `({${returnVal}})`;
+    return `{${returnVal}}`;
   }
 }
