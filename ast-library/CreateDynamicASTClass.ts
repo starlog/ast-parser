@@ -83,6 +83,11 @@ import JSXExpressionContainer from './JSXExpressionContainer';
 import JSXIdentifier from './JSXIdentifier';
 import JSXClosingElement from './JSXClosingElement';
 import JSXText from './JSXText';
+import JSXEmptyExpression from './JSXEmptyExpression';
+import JSXSpreadAttribute from './JSXSpreadAttribute';
+import ThrowStatement from './ThrowStatement';
+
+
 
 const classes = [
   ImportDeclaration,
@@ -165,6 +170,9 @@ const classes = [
   JSXIdentifier,
   JSXClosingElement,
   JSXText,
+  JSXEmptyExpression,
+  JSXSpreadAttribute,
+  ThrowStatement,
 ];
 
 const logger = getLogger();
