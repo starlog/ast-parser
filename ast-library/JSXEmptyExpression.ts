@@ -6,7 +6,15 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
 export default class JSXEmptyExpression extends ast {
   toString() {
-    const x = this.obj;
-    return `(Bare:${this.constructor.name})`;
+    let returnVal = '';
+    if (this.obj?.innerComments) {
+      let innerComments = '';
+      this.obj?.innerComments.forEach((x) => {
+        const myObject = CreateDynamicASTClass(x);
+        innerComments += myObject.get();
+      });
+      returnVal += `{${innerComments}}`;
+    }
+    return returnVal;
   }
 }

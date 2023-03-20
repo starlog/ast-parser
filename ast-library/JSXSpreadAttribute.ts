@@ -6,7 +6,13 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
 export default class JSXSpreadAttribute extends ast {
   toString() {
-    const x = this.obj;
-    return `(Bare:${this.constructor.name})`;
+    let returnVal = '';
+    if (this.obj?.argument) {
+      let argument = '';
+      const myObject = CreateDynamicASTClass(this.obj.argument);
+      argument += myObject.get();
+      returnVal += `{...${argument}}`;
+    }
+    return returnVal;
   }
 }

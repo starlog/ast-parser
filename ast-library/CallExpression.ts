@@ -7,7 +7,7 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 export default class CallExpression extends ast {
   toString() {
     let returnVal = '';
-    if (this.obj?.value) {
+    if (this.obj?.callee || this.obj?.arguments) {
       let data1 = '';
       let data2 = '';
       if (this.obj?.callee) {

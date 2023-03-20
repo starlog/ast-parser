@@ -3,7 +3,7 @@
 //-------------------------------------------------------------------------------------------------
 import * as fs from 'fs';
 import * as parser from '@babel/parser';
-import {getLogger, setLevel} from './ast-library/logger';
+import { getLogger, setLevel } from './ast-library/logger';
 import {
   CreateDynamicASTClass,
   utilASTRemoveLocationInfo,
@@ -15,7 +15,7 @@ const logger = getLogger();
 
 const filePrefix = '/home/felix/src/granada-user-app/src/components/';
 const targetFiles = [
-  'UI008.tsx',
+  'UI013.tsx',
 ];
 
 function title(titleString) {

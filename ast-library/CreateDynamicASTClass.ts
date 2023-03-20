@@ -13,6 +13,7 @@ import BinaryExpression from './BinaryExpression';
 import BlockStatement from './BlockStatement';
 import BooleanLiteral from './BooleanLiteral';
 import CallExpression from './CallExpression';
+import CatchClause from './CatchClause';
 import CommentBlock from './CommentBlock';
 import CommentLine from './CommentLine';
 import ConditionalExpression from './ConditionalExpression';
@@ -86,6 +87,8 @@ import TryStatement from './TryStatement';
 import UnaryExpression from './UnaryExpression';
 import VariableDeclaration from './VariableDeclaration';
 import VariableDeclarator from './VariableDeclarator';
+import JSXClosingFragment from './JSXClosingFragment';
+import JSXOpeningFragment from './JSXOpeningFragment';
 
 export const classes = [
   ArrayExpression,
@@ -98,6 +101,7 @@ export const classes = [
   BlockStatement,
   BooleanLiteral,
   CallExpression,
+  CatchClause,
   CommentBlock,
   CommentLine,
   ConditionalExpression,
@@ -171,6 +175,8 @@ export const classes = [
   UnaryExpression,
   VariableDeclaration,
   VariableDeclarator,
+  JSXClosingFragment,
+  JSXOpeningFragment,
 ];
 
 const logger = getLogger();
