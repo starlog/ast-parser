@@ -12,8 +12,9 @@ export default class ObjectExpression extends ast {
         const myObject = CreateDynamicASTClass(x);
         returnVal += `${myObject.get()}, `;
       });
+      returnVal = returnVal.slice(0, -2);
+      returnVal += `{${returnVal}}`;
     }
-    returnVal = returnVal.slice(0, -2);
-    return `{${returnVal}}`;
+    return returnVal;
   }
 }

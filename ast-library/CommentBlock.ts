@@ -5,6 +5,10 @@ import ast from './ast';
 
 export default class CommentBlock extends ast {
   toString() {
-    return `\n  /*${this.obj?.value}*/`;
+    let returnVal = '';
+    if (this.obj?.value) {
+      returnVal += `\n  /*${this.obj?.value}*/`;
+    }
+    return returnVal;
   }
 }

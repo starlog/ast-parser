@@ -7,13 +7,15 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 export default class TSFunctionType extends ast {
   toString() {
     let returnString = '';
-    this.obj?.parameters.forEach((x) => {
-      const myObject = CreateDynamicASTClass(x);
+    if (this.obj?.parameters){
+      this.obj?.parameters.forEach((x) => {
+        const myObject = CreateDynamicASTClass(x);
+        returnString += myObject.get();
+      });
+      returnString = `(${returnString}) => `;
+      const myObject = CreateDynamicASTClass(this.obj?.typeAnnotation);
       returnString += myObject.get();
-    });
-    returnString = `(${returnString}) => `;
-    const myObject = CreateDynamicASTClass(this.obj?.typeAnnotation);
-    returnString += myObject.get();
+    }
     return returnString;
   }
 }

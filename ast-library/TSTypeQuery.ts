@@ -7,9 +7,11 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 export default class TSTypeQuery extends ast {
   toString() {
     let returnVal = '';
-    returnVal += 'typeof ';
-    const myQuery = CreateDynamicASTClass(this.obj?.exprName);
-    returnVal += myQuery.get();
+    if (this.obj?.exprName) {
+      returnVal += 'typeof ';
+      const myQuery = CreateDynamicASTClass(this.obj?.exprName);
+      returnVal += myQuery.get();
+    }
     return returnVal;
   }
 }

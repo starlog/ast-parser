@@ -10,7 +10,8 @@ export default class SpreadElement extends ast {
     if (this.obj?.argument) {
       const myObject = CreateDynamicASTClass(this.obj.argument);
       argument += myObject.get();
+      argument = `...${argument}`;
     }
-    return `...${argument}`;
+    return argument;
   }
 }

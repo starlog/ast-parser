@@ -7,11 +7,10 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 export default class TSArrayType extends ast {
   toString() {
     let returnVal = '';
+
     if (this.obj?.elementType) {
       const myObject = CreateDynamicASTClass(this.obj.elementType);
       returnVal += `${myObject.get()}[]`;
-    } else {
-      returnVal += 'any[]';
     }
     return returnVal;
   }

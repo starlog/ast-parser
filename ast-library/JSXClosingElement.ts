@@ -9,8 +9,8 @@ export default class JSXClosingElement extends ast {
     let name = '';
     if (this.obj?.name) {
       const myObject = CreateDynamicASTClass(this.obj.name);
-      name += myObject.get();
+      name += `</${myObject.get()}>`;
     }
-    return `</${name}>`;
+    return name;
   }
 }

@@ -5,6 +5,9 @@ import ast from './ast';
 
 export default class NumericLiteral extends ast {
   toString() {
-    return this.obj?.value;
+    if (this.obj?.value){
+      return this.obj?.value;
+    }
+    return '';
   }
 }

@@ -6,16 +6,20 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
 export default class JSXAttribute extends ast {
   toString() {
-    let name = '';
-    let value = '';
-    if (this.obj?.name) {
-      const myObject = CreateDynamicASTClass(this.obj.name);
-      name += myObject.get();
+    let returnVal = '';
+    if (this.obj?.name || this.obj?.value) {
+      let name = '';
+      let value = '';
+      if (this.obj?.name) {
+        const myObject = CreateDynamicASTClass(this.obj.name);
+        name += myObject.get();
+      }
+      if (this.obj?.value) {
+        const myObject = CreateDynamicASTClass(this.obj.value);
+        value += myObject.get();
+      }
+      returnVal += `${name}={${value}}`;
     }
-    if (this.obj?.value) {
-      const myObject = CreateDynamicASTClass(this.obj.value);
-      value += myObject.get();
-    }
-    return `${name}={${value}}`;
+    return returnVal;
   }
 }

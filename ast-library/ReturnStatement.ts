@@ -10,7 +10,8 @@ export default class ReturnStatement extends ast {
     if (this.obj?.argument) {
       const myObject = CreateDynamicASTClass(this.obj.argument);
       returnVal += myObject.get();
+      returnVal = `return (${returnVal});`;
     }
-    return `return (${returnVal});`;
+    return returnVal;
   }
 }

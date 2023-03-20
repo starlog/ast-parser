@@ -13,7 +13,8 @@ export default class ArrayExpression extends ast {
         returnVal += `${myObject.get()}, `;
       });
       returnVal = returnVal.slice(0, -2);
+      returnVal = `[${returnVal}]`;
     }
-    return `[${returnVal}]`;
+    return returnVal;
   }
 }

@@ -5,6 +5,9 @@ import ast from './ast';
 
 export default class ImportSpecifier extends ast {
   toString() {
-    return this.obj?.local.name;
+    if (this.obj?.local?.name) {
+      return this.obj?.local.name;
+    }
+    return '';
   }
 }

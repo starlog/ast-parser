@@ -12,7 +12,8 @@ export default class TSTypeParameterInstantiation extends ast {
         const myObject = CreateDynamicASTClass(x);
         returnVal += myObject.get();
       });
+      returnVal = `<${returnVal}>`;
     }
-    return `<${returnVal}>`;
+    return returnVal;
   }
 }

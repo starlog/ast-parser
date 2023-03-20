@@ -10,7 +10,8 @@ export default class ExportDefaultDeclaration extends ast {
     if (this.obj?.declaration) {
       const myObject = CreateDynamicASTClass(this.obj.declaration);
       returnVal += myObject.get();
+      returnVal = `export default ${returnVal};`;
     }
-    return `export default ${returnVal};`;
+    return returnVal;
   }
 }

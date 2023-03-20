@@ -9,8 +9,8 @@ export default class ExpressionStatement extends ast {
     let returnVal = '';
     if (this.obj?.expression) {
       const myObject = CreateDynamicASTClass(this.obj.expression);
-      returnVal += myObject.get();
+      returnVal += `${myObject.get()};`;
     }
-    return `${returnVal};`;
+    return returnVal;
   }
 }

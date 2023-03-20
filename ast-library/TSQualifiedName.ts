@@ -5,6 +5,10 @@ import ast from './ast';
 
 export default class TSQualifiedName extends ast {
   toString() {
-    return `${this.obj?.left.name}.${this.obj?.right.name}`;
+    let returnVal = '';
+    if (this.obj?.left?.name && this.obj?.right?.name) {
+      returnVal += `${this.obj?.left.name}.${this.obj?.right.name}`;
+    }
+    return returnVal;
   }
 }

@@ -5,6 +5,10 @@ import ast from './ast';
 
 export default class BooleanLiteral extends ast {
   toString() {
-    return `${this.obj.value}`;
+    let returnVal = '';
+    if (this.obj?.value) {
+      returnVal += `${this.obj.value}`;
+    }
+    return returnVal;
   }
 }

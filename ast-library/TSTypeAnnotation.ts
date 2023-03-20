@@ -6,7 +6,11 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
 export default class TSTypeAnnotation extends ast {
   toString() {
-    const myObject = CreateDynamicASTClass(this.obj?.typeAnnotation);
-    return myObject.get();
+    let returnVal = '';
+    if (this.obj?.typeAnnotation) {
+      const myObject = CreateDynamicASTClass(this.obj?.typeAnnotation);
+      returnVal += myObject.get();
+    }
+    return returnVal;
   }
 }
