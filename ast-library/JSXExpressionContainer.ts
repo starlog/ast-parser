@@ -11,6 +11,6 @@ export default class JSXExpressionContainer extends ast {
       const myObject = CreateDynamicASTClass(this.obj.expression);
       expression += myObject.get();
     }
-    return expression;
+    return `{${expression}`;
   }
 }
