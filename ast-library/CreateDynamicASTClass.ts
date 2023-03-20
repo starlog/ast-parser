@@ -89,6 +89,9 @@ import VariableDeclaration from './VariableDeclaration';
 import VariableDeclarator from './VariableDeclarator';
 import JSXClosingFragment from './JSXClosingFragment';
 import JSXOpeningFragment from './JSXOpeningFragment';
+import BreakStatement from './BreakStatement';
+import ContinueStatement from './ContinueStatement';
+import SwitchCase from './SwitchCase';
 
 export const classes = [
   ArrayExpression,
@@ -177,6 +180,9 @@ export const classes = [
   VariableDeclarator,
   JSXClosingFragment,
   JSXOpeningFragment,
+  BreakStatement,
+  ContinueStatement,
+  SwitchCase,
 ];
 
 const logger = getLogger();

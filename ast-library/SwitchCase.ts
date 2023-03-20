@@ -4,17 +4,22 @@
 import ast from './ast';
 import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
-export default class SequenceExpression extends ast {
+export default class SwitchCase extends ast {
   toString() {
     let returnVal = '';
-    let expressionsString = '';
-    if (this.obj?.expressions) {
-      this.obj.expressions.forEach((x) => {
+    let testString = '';
+    let consequentString = '';
+    if (this.obj?.test) {
+      const myObject = CreateDynamicASTClass(this.obj.test);
+      testString += myObject.get();
+      returnVal += `case '${testString}':`;
+    }
+    if (this.obj?.consequent) {
+      this.obj.consequent.forEach((x) => {
         const myObject = CreateDynamicASTClass(x);
-        expressionsString += `${myObject.get()}, `;
+        consequentString += `${myObject.get()}`;
+        returnVal += `${consequentString}`;
       });
-      expressionsString = expressionsString.slice(0, -2);
-      returnVal = `${expressionsString}`;
     }
     return returnVal;
   }

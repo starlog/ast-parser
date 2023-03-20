@@ -8,27 +8,27 @@ export default class TemplateLiteral extends ast {
   toString() {
     let returnVal = '';
     if (this.obj?.expressions || this.obj?.quasis) {
-      let val1 = '';
+      // let val1 = '';
       let val2 = '';
-      if (this.obj?.expressions) {
-        this.obj.expressions.forEach((x) => {
-          const myObject = CreateDynamicASTClass(x);
-          val1 += myObject.get();
-        });
-      }
-      if (this.obj?.quasis) {
+      // if (this.obj?.expressions) {
+      //   this.obj.expressions.forEach((x) => {
+      //     const myObject = CreateDynamicASTClass(x);
+      //     val1 += myObject.get();
+      //   });
+      // }
+      if (this.obj?.quasis || this.obj?.expressions) {
         this.obj.quasis.forEach((x, index) => {
           const myObject = CreateDynamicASTClass(x);
           val2 += myObject.get();
           if (index === 0 && this.obj?.expressions) {
             this.obj.expressions.forEach((y) => {
               const myObject2 = CreateDynamicASTClass(y);
-              val2 += myObject2.get();
+              val2 += `\${${myObject2.get()}}`;
             });
           }
         });
       }
-      returnVal += `\`${val1}${val2}`;
+      returnVal += `${val2}`;
     }
     return returnVal;
   }

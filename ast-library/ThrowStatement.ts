@@ -6,7 +6,14 @@ import { CreateDynamicASTClass } from './CreateDynamicASTClass';
 
 export default class ThrowStatement extends ast {
   toString() {
-    const x = this.obj;
-    return `(Bare:${this.constructor.name})`;
+    let returnVal = '';
+    let argumentString = '';
+    if (this.obj?.argument) {
+      const myObject = CreateDynamicASTClass(this.obj.argument);
+      argumentString += myObject.get();
+
+      returnVal += `throw ${argumentString}`;
+    }
+    return returnVal;
   }
 }
