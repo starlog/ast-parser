@@ -37,7 +37,7 @@ for (const element of targetFiles) {
     plugins: ['jsx', 'typescript'],
   });
 
-  utilASTRemoveLocationInfo(codeData); // Erasing all location information for easy analysis
+  // utilASTRemoveLocationInfo(codeData); // Erasing all location information for easy analysis
 
   //------------------------------------------------------------------------------------------------
   // Import 구문 분석, 개별 클래스 방식
